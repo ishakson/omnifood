@@ -1,21 +1,25 @@
-/*********/
-/*HEADER */
-/*********/
+/**************************/
+/* HEADER */
+/**************************/
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fdf2e9;
+
+  /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
 }
+
 .logo {
   height: 2.2rem;
 }
-/*********/
-/*NAVIGATION*/
-/*********/
+
+/**************************/
+/* NAVIGATION */
+/**************************/
 
 .main-nav-list {
   list-style: none;
@@ -51,20 +55,22 @@
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
-/*********/
-/*HERO SECTION*/
-/*********/
+
+/**************************/
+/* HERO SECTION */
+/**************************/
 
 .section-hero {
   background-color: #fdf2e9;
   padding: 4.8rem 0 9.6rem 0;
 }
+
 .hero {
-  max-width: 120rem;
+  max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 3.2rem;
   gap: 9.6rem;
   align-items: center;
 }
@@ -81,9 +87,9 @@
 
 .delivered-meals {
   display: flex;
-  margin-top: 8rem;
   align-items: center;
   gap: 1.6rem;
+  margin-top: 8rem;
 }
 
 .delivered-imgs {
@@ -111,9 +117,10 @@
   color: #cf711f;
   font-weight: 700;
 }
-/*********/
-/*FEATURED  SECTION*/
-/*********/
+
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -140,9 +147,10 @@
   opacity: 50%;
 }
 
-/*********/
-/*HOW IT WORKS SECTION*/
-/*********/
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
+
 .section-how {
   padding: 9.6rem 0;
 }
@@ -161,6 +169,7 @@
 
 .step-img-box {
   position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,9 +185,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .step-img-box::before {
   width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
   padding-bottom: 60%;
+
   background-color: #fdf2e9;
   z-index: -2;
 }
@@ -192,11 +206,12 @@
 
 .step-img {
   width: 35%;
+  /* z-index: 10; */
 }
 
-/*********/
-/*MEALS SECTION*/
-/*********/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-meals {
   padding: 9.6rem 0;
@@ -237,20 +252,18 @@
 .tag--vegetarian {
   background-color: #51cf66;
 }
-
 .tag--vegan {
   background-color: #94d82d;
 }
-
 .tag--paleo {
   background-color: #ffd43b;
 }
+
 .meal-title {
   font-size: 2.4rem;
   color: #333;
   font-weight: 600;
   margin-bottom: 3.2rem;
-  text-align: center;
 }
 
 .meal-attributes {
@@ -282,9 +295,9 @@
   font-size: 1.8rem;
 }
 
-/*********/
-/*TESTIMONIAL SECTION*/
-/*********/
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
 
 .section-testimonials {
   background-color: #fdf2e9;
@@ -292,7 +305,8 @@
   grid-template-columns: 55fr 45fr;
   align-items: center;
 }
-.testimonial-container {
+
+.testimonials-container {
   padding: 9.6rem;
 }
 
@@ -326,13 +340,14 @@
   gap: 1.6rem;
   padding: 1.6rem;
 }
+
 .gallery-item {
   overflow: hidden;
 }
+
 .gallery-item img {
   display: block;
   width: 100%;
-
   transition: all 0.4s;
 }
 
@@ -340,9 +355,9 @@
   transform: scale(1.1);
 }
 
-/*********/
-/*MEALS SECTION*/
-/*********/
+/**************************/
+/* MEALS SECTION */
+/**************************/
 
 .section-pricing {
   padding: 9.6rem 0;
@@ -448,23 +463,27 @@
   line-height: 1.8;
 }
 
-/*********/
-/*CTA   SECTION*/
-/*********/
+/**************************/
+/* CTA SECTION */
+/**************************/
 
 .section-cta {
-  padding: 9.6rem 0;
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  background-color: #e67e22;
+  /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
+
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
-  height: 50rem;
 }
 
 .cta-text-box {
@@ -473,7 +492,8 @@
 }
 
 .cta .heading-secondary {
-  color: #45260a;
+  /* color: #45260a; */
+  color: inherit;
   margin-bottom: 3.2rem;
 }
 
@@ -483,14 +503,13 @@
   margin-bottom: 4.8rem;
 }
 
-
 .cta-img-box {
   background-image: linear-gradient(
       to right bottom,
       rgba(235, 151, 78, 0.35),
       rgba(230, 125, 34, 0.35)
     ),
-    url(../img/eating.jpg);
+    url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -500,4 +519,110 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
